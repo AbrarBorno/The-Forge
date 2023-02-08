@@ -22,8 +22,8 @@ jobs:
       uses: actions/checkout@v3
       with:
         path: Custom-Middleware
-        repository: https://github.com/ConfettiFX/Custom-Middleware
-        ref: master  # Checkout the Custom-Middleware branch with the same name as the The-Forge branch we're building.
+        repository: ${{ github.repository_owner }}/Custom-Middleware
+        ref: ${{ github.ref_name }}  # Checkout the Custom-Middleware branch with the same name as the The-Forge branch we're building
 
     - name: Setup Python
       uses: actions/setup-python@v4
